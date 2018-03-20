@@ -10,12 +10,18 @@ var request = require("request");
 var scraper = require("./scraper.js");
 
 var mongoose = require("mongoose");
-// By default mongoose uses callbacks for async queries, we're setting it to use promises (.then syntax) instead
+
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/week18Populater";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
+// By default mongoose uses callbacks for async queries, we're setting it to use promises (.then syntax) instead
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/week18Populater", {
+mongoose.connect(MONGODB_URI, {
   useMongoClient: true
 });
+
 
 var bodyParser = require("body-parser");
 // Sets up the Express app to handle data parsing
