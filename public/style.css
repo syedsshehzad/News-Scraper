@@ -1,0 +1,66 @@
+
+body {
+	margin: 10px;
+	background: rgb(255,255,0);
+}
+
+section {
+	background: rgb(255,50,200);
+	margin: 15px;
+}
+
+header, div {
+	background: rgb(255,50,50);
+	margin: 15px;
+}
+
+div {
+	width: 250px;
+	display: inline-block;
+	border: solid red 2px;
+}
+
+h1 {
+	display: inline-block;
+	margin: 15px;
+	padding: 15px;
+	font: bold 30px Georgia;
+	background: rgb(255,50,200);
+	color: rgb(50,255,100);
+}
+
+h2 {
+	font: bold 20px Arial;
+	color: rgb(50,255,100);
+}
+
+p, h2, h4, img, input {
+	margin: 10px auto;
+	display: block;
+	text-align: center;
+}
+
+.preview, button {
+	display: inline;
+	margin: 10px;
+}
+
+.notes {
+	width: 200px;
+	background: rgb(50,255,100);
+	display: block;
+	margin: 10px auto;
+}
+
+.x {
+	height: 15px;
+	margin: 5px;
+	display: inline;
+	float: right;
+}
+
+h3 {
+	font-weight: bold;
+	float: left;
+	margin: 5px;
+}

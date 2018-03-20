@@ -1,0 +1,31 @@
+{
+  "name": "news-scraper",
+  "version": "1.0.0",
+  "description": "A web app which scrapes NY Times articles",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedsshehzad/News-Scraper.git"
+  },
+  "keywords": [
+    "web",
+    "scraping"
+  ],
+  "author": "Syed Sahir Shehzad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedsshehzad/News-Scraper/issues"
+  },
+  "homepage": "https://github.com/syedsshehzad/News-Scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.10",
+    "request": "^2.85.0"
+  }
+}

@@ -1,0 +1,26 @@
+<section>
+	{{#each results}}
+	<div>
+		<h2>{{title}}</h2>
+		<p>Database ID: {{_id}}</p>
+		<img src="{{image}}"/>
+		<a href="{{link}}" class="preview" target="_blank">Preview song</a>
+		<button class="delete" id="{{_id}}">Remove entry</button>
+		<form action="/comment/{{_id}}" method="post">
+			<input type="text" name="commentTitle">
+			<input type="text" name="commentBody">
+			<button type="submit">Add comment</button>
+		</form>
+		{{#each comments}}
+		<div class="notes">
+			<h3>{{title}}</h3>
+			<a href="/x/{{_id}}" method="post">
+				<img src="./x.png" class="x">
+			</a>
+			<br>
+			<h4>{{body}}</h4>
+		</div>
+		{{/each}}
+	</div>
+	{{/each}}
+</section>
