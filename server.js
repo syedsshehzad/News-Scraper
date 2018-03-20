@@ -35,7 +35,7 @@ app.use(express.static('public'));
 
 var cache;
 
-app.get("/home", function(req, res) {
+app.get("/", function(req, res) {
 
   // The web scraper will intake arguments cheerio and request
   scraper(cheerio, request).then(results => {
