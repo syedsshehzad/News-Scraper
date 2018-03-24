@@ -1,28 +1,33 @@
 <section>
 	{{#each results}}
-	<div>
+	<div class="song">
 		<h2>{{title}}</h2>
 		<p>Database ID: {{_id}}</p>
-		<a href="/songs/{{_id}}">
-			<img src="{{image}}"/>
+		<a href="/saved/{{_id}}">
+			<img src="{{image}}">
 		</a>
 		<a href="{{link}}" class="preview" target="_blank">Preview song</a>
 		<button class="delete" id="{{_id}}">Remove entry</button>
-		<form action="/comment/{{_id}}" method="post">
+
+		<form action="/comment/{{_id}}" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 1)">
+			<legend>Name (required):</legend>
 			<input type="text" name="commentTitle">
+			<legend>Text:</legend>
 			<input type="text" name="commentBody">
+			<button type="button" class="show">Display {{comments.length}}</button>
 			<button type="submit">Add comment</button>
 		</form>
-		{{#each comments}}
-		<div class="notes">
-			<h3>{{title}}</h3>
-			<a href="/x/{{_id}}" method="post">
-				<img src="./x.png" class="x">
-			</a>
-			<br>
-			<h4>{{body}}</h4>
+
+		<div class="group">
+			{{#each comments}}
+			<div class="comment">
+				<h3>{{title}}</h3>
+				<img src="./x.png" class="x" target="{{_id}}">
+				<h4>{{body}}</h4>
+			</div>
+			{{/each}}
 		</div>
-		{{/each}}
+
 	</div>
 	{{/each}}
 </section>

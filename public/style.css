@@ -9,15 +9,16 @@ section {
 	margin: 15px;
 }
 
-header, div {
+header, .song {
 	background: rgb(255,50,50);
 	margin: 15px;
 }
 
-div {
+.song {
 	width: 250px;
 	display: inline-block;
 	border: solid red 2px;
+	padding: 10px;
 }
 
 h1 {
@@ -32,12 +33,21 @@ h1 {
 h2 {
 	font: bold 20px Arial;
 	color: rgb(50,255,100);
+	margin: 5px;
 }
 
-p, h2, h4, img, input {
+img {
 	margin: 10px auto;
 	display: block;
+}
+
+p, h2, h4, legend {
 	text-align: center;
+}
+
+input {
+	margin: 0px auto 5px;
+	display: block;
 }
 
 .preview, button {
@@ -45,10 +55,15 @@ p, h2, h4, img, input {
 	margin: 10px;
 }
 
-.notes {
-	width: 200px;
+.group {
+	background: rgb(50,150,255);
+	padding: 10px;
+}
+
+.comment {
 	background: rgb(50,255,100);
 	display: block;
+	padding: 5px;
 	margin: 10px auto;
 }
 
@@ -59,8 +74,12 @@ p, h2, h4, img, input {
 	float: right;
 }
 
+.show {
+	margin-left: 20px;
+}
+
 h3 {
 	font-weight: bold;
-	float: left;
+	display: inline;
 	margin: 5px;
 }
