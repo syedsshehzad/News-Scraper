@@ -9,7 +9,7 @@
 		<a href="{{link}}" class="preview" target="_blank">Preview song</a>
 		<button class="delete" id="{{_id}}">Remove entry</button>
 
-		<form action="/comment/{{_id}}" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 1)">
+		<form action="/comment/{{_id}}" method="post" onsubmit="setTimeout(function () { window.location.reload(); }, 90)">
 			<legend>Name (required):</legend>
 			<input type="text" name="commentTitle">
 			<legend>Text:</legend>
