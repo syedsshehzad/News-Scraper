@@ -68,3 +68,5 @@ When a user clicks delete button, it sends AJAX "POST" request with information 
 * The `_id` only matches the saved data in the saved page.
 * Comments can be added or deleted only in the "saved" page.
 * Each div in the "saved" page is populated with comments.
+
+![Screenshot](scraper.png)
